@@ -11,3 +11,7 @@ https://4thaugust.github.io/E-commerce-USER/
 
 
 ## :page_with_curl: Database 
+
+# หมายเหตุ 
+- Password เก็บอยู่ใน DB module atuthen
+- ประวัติการสั่งซื้อมี Key ที่ต้องเชื่อมไปหา Order จาก Module Order           
