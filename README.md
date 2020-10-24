@@ -13,12 +13,12 @@ https://4thaugust.github.io/E-commerce-USER/
 ## :page_with_curl: Database 
 
 1. ผู้ใช้ (USER)
-  * ไอดี (id)
-  * ชื่อบัญชีผู้ใช้ (userName)
-  * อีเมล (email)
-  * ชื่อ (firstName)
-  * นามสกุล (lastName)
-  * เพศ (gender)
+   * ไอดี (id)
+   * ชื่อบัญชีผู้ใช้ (userName)
+   * อีเมล (email)
+   * ชื่อ (firstName)
+   * นามสกุล (lastName)
+   * เพศ (gender)
 
   
 # หมายเหตุ 
