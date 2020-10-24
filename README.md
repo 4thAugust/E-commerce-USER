@@ -19,8 +19,9 @@ https://4thaugust.github.io/E-commerce-USER/
    * ชื่อ (firstName)
    * นามสกุล (lastName)
    * เพศ (gender)
+   * ที่อยู่ (address)
 
   
 # หมายเหตุ 
-- Password เก็บอยู่ใน DB module atuthen
+- Password เก็บอยู่ใน DB module authen
 - ประวัติการสั่งซื้อมี Key ที่ต้องเชื่อมไปหา Order จาก Module Order           
