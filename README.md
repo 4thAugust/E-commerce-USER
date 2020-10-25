@@ -1,5 +1,7 @@
 # E-commerce-Module USER (by August Team)
 
+# Last Update 25/10/20
+
 ## :computer: User Interface 
 https://4thaugust.github.io/E-commerce-USER/
 ## :wrench: Product Service 
@@ -11,7 +13,11 @@ https://4thaugust.github.io/E-commerce-USER/
 
 
 ## :page_with_curl: Database 
-![1603615172522](https://user-images.githubusercontent.com/42909578/97102501-9c8a7a00-16d8-11eb-8aba-126af524d149.jpg)
+
+![Copy of USER (3)](https://user-images.githubusercontent.com/41178248/97113442-f0b74d80-171c-11eb-97f3-0aa7c91a6ac2.png)
+
+
+
 1. ผู้ใช้ (USER)
    * ไอดี (id)
    * ชื่อบัญชีผู้ใช้ (userName)
@@ -30,7 +36,9 @@ https://4thaugust.github.io/E-commerce-USER/
    * เลขที่ (number)
    * รหัสไปรษณีย์ (postal_code)
    
+
+   
 # หมายเหตุ 
-- Password เก็บอยู่ใน DB module authen
+- ผู้ใช้งาน (USER) จะมี Password เก็บอยู่ใน DB จากอีกตาราง ในส่วนนี้รอจาก module authen
 - ผู้ใช้งาน (USER) สามารถดูประวัติการสั่งซื้อได้ ซึ่งจะมี FK ที่ต้องเชื่อมมาว่า Order นั้นเป็นคน User นั้น โดยข้อมูลในส่วนนี้รอจาก Module Order         
 - ผู้ใช้งาน (USER) สามารถมีที่อยู่ (address) ได้หลายข้อมูลจึงทำให้เกิดการแยกตารางเก็บออกมาเป็นตารางใหม่ชื่อ MY_ADDRESS ที่มี FK คือ USER_id
