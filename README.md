@@ -3,11 +3,11 @@
 ## :computer: User Interface 
 https://4thaugust.github.io/E-commerce-USER/
 ## :wrench: Product Service 
--   สมัครสมาชิกลูกค้า (Sign Up)
--   เข้าสู่ระบบ (Log in)
--   ลบบัญชีผู้ใช้
--   แก้ไขข้อมูลบัญชี
--   ดูประวัติรายการสั่งซื้อ
+-   สมัครสมาชิกลูกค้า (SignUp)
+-   เข้าสู่ระบบ (Login)
+-   ลบบัญชีผู้ใช้ (Delete)
+-   แก้ไขข้อมูลบัญชี (Edit)
+-   ดูประวัติรายการสั่งซื้อ (History)
 
 
 ## :page_with_curl: Database 
