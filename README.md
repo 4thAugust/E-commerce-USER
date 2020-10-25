@@ -32,5 +32,5 @@ https://4thaugust.github.io/E-commerce-USER/
    
 # หมายเหตุ 
 - Password เก็บอยู่ใน DB module authen
-- ประวัติการสั่งซื้อมี Key ที่ต้องเชื่อมไปหา Order จาก Module Order ซึ่งก็คือ orderID           
+- ผู้ใช้งาน (USER) สามารถดูประวัติการสั่งซื้อได้ ซึ่งจะมี FK ที่ต้องเชื่อมมาว่า Order นั้นเป็นคน User นั้น โดยข้อมูลในส่วนนี้รอจาก Module Order         
 - ผู้ใช้งาน (USER) สามารถมีที่อยู่ (address) ได้หลายข้อมูลจึงทำให้เกิดการแยกตารางเก็บออกมาเป็นตารางใหม่ชื่อ MY_ADDRESS ที่มี FK คือ USER_id
