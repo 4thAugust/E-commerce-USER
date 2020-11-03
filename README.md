@@ -25,7 +25,6 @@ https://4thaugust.github.io/E-commerce-USER/
    * ชื่อ (firstName)
    * นามสกุล (lastName)
    * เพศ (gender)
-   * ที่อยู่ (address)
    * เบอร์โทร (phone)
    * วันเกิด (dateOfBirth)
    
