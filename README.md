@@ -5,12 +5,11 @@
 ## :computer: User Interface 
 https://4thaugust.github.io/E-commerce-USER/
 ## :wrench: Product Service 
--   สมัครสมาชิกลูกค้า (SignUp)
--   เข้าสู่ระบบ (Login)
+
 -   ลบบัญชีผู้ใช้ (Delete)
 -   แก้ไขข้อมูลบัญชี เช่น ชื่อ, ที่อยู่, รหัสผ่าน (Edit)
 -   ดูประวัติรายการสั่งซื้อ (History)
-
+- 
 
 ## :page_with_curl: Database 
 
@@ -27,7 +26,7 @@ https://4thaugust.github.io/E-commerce-USER/
    * เพศ (gender)
    * เบอร์โทร (phone)
    * วันเกิด (dateOfBirth)
-   * รูปภาพ (image)
+
    
 2. ที่อยู่ของผู้ใช้งาน (MY_ADDRESS)
    * ไอดี (my_address_id)
