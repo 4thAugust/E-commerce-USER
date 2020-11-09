@@ -12,9 +12,7 @@ https://4thaugust.github.io/E-commerce-USER/
 - 
 
 ## :page_with_curl: Database 
-
-![Copy of USER (3)](https://user-images.githubusercontent.com/41178248/97113442-f0b74d80-171c-11eb-97f3-0aa7c91a6ac2.png)
-
+![USER 9_11](https://user-images.githubusercontent.com/41178248/98516328-f2494f80-229e-11eb-8c38-c241980dd46c.png)
 
 
 1. ผู้ใช้ (USER)
