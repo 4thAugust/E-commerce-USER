@@ -1,6 +1,6 @@
 # E-commerce-Module USER (by August Team)
 
-# Last Update 25/10/20
+# Last Update 9/11/2020
 
 ## :computer: User Interface 
 https://4thaugust.github.io/E-commerce-USER/
