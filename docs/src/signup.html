@@ -24,25 +24,11 @@
     <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
 
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
     <!-- Custom styles for this template -->
-    <link href="pricing.css" rel="stylesheet">
+    <link href="styleNam.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,12 +37,69 @@
 
         <nav class="my-2 my-md-0 mr-md-3">
             <a class="p-2 text-dark" href="../index.html">Home</a>
-
-            
-
         </nav>
+    </div>
 
-
+    <div class="container">
+        <div class="row">
+            <h3>Register</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Name</label>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="firstname" placeholder="First name">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="lastname" placeholder="Last name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputState">Gender</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="numberphone">Phone</label>
+                            <input type="text" class="form-control" id="numberphone" placeholder="Phone numbers">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Date Of birth</label>
+                            <div class="col-10">
+                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                            </div>
+    
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                SignUp
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <!-- jQuery and JS bundle w/ Popper.js -->
