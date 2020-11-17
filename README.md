@@ -14,8 +14,8 @@ https://4thaugust.github.io/E-commerce-USER/
 - /deleteAddress/<my_address_id>
 
 ## :page_with_curl: Database 
+![USER (3)](https://user-images.githubusercontent.com/41178248/99364192-44662280-28e8-11eb-9f11-31f35bec7fd4.png)
 
-![USER (1)](https://user-images.githubusercontent.com/41178248/99363118-ef75dc80-28e6-11eb-9233-bc2932a19991.png)
 
 
 1. ผู้ใช้ (USER)
