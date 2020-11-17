@@ -4,12 +4,16 @@
 
 ## :computer: User Interface 
 https://4thaugust.github.io/E-commerce-USER/
-## :wrench: Product Service 
-
--   ลบบัญชีผู้ใช้ (Delete)
--   แก้ไขข้อมูลบัญชี เช่น ชื่อ, ที่อยู่, รหัสผ่าน (Edit)
--   ดูประวัติรายการสั่งซื้อ (History)
-- 
+## :wrench: API
+-  /createUser/
+- /getUser/<userName>
+- /getAllUser
+- /groupByGender/<gender>
+- /groupByAge/<age_range>
+- /createAddress/
+- /getAddress/
+- /updateAddress/<my_address_id>
+- /deleteAddress/<my_address_id>
 
 ## :page_with_curl: Database 
 ![USER 9_11 (2)](https://user-images.githubusercontent.com/41178248/98644364-f048c480-2362-11eb-91b6-bd0953792534.png)
