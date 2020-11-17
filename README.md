@@ -3,7 +3,7 @@
 ## :computer: User Interface 
 https://4thaugust.github.io/E-commerce-USER/
 ## :wrench: API
--  /createUser/
+- /createUser/
 - /getUser/<userName>
 - /getAllUser
 - /groupByGender/<gender>
