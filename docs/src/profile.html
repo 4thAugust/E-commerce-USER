@@ -5,223 +5,221 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Login Page</title>
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/pricing/">
-    <!-- CSS -->
+    <title>Dashboard Template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
-    <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#563d7c">
 
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
     <!-- Custom styles for this template -->
-    <link href="pricing.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <h5 class="my-0 mr-md-auto font-weight-normal">E-Commerce</h5>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">E-Commerce</a>
+        <ul class="navbar-nav px-3">
+            <a href="../index.html"><button type="button" class="btn btn-danger">home</button></a>
+            
+        </ul>
+    </nav>
 
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="catelog.html">Home</a>
-
-        </nav>
-
-
-    </div>
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="sidebar-sticky pt-3">
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-
-                                userXXX <span class="sr-only">(current)</span>
+                            <a class="nav-link active" href="profile.html">
+                                <span data-feather="user"></span>
+                                ประวัติของฉัน <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./editProfile.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-users">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                                ประวัติของฉัน
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./address.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-file">
-                                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                                    <polyline points="13 2 13 9 20 9"></polyline>
-                                </svg>
+                            <a class="nav-link" href="address.html">
+                                <span data-feather="home"></span>
                                 ที่อยู่
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./history.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-shopping-cart">
-                                    <circle cx="9" cy="21" r="1"></circle>
-                                    <circle cx="20" cy="21" r="1"></circle>
-                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                                </svg>
-                                ประวัติการสั่งซื้อ
+                            <a class="nav-link" href="history.html">
+                                <span data-feather="shopping-cart"></span>
+                                การสั่งซื้อของฉัน
                             </a>
                         </li>
+                        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
                         <!-- <li class="nav-item">
-            <a class="nav-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-             
-            </a>
-          </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="./changePassword.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-layers">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                    <polyline points="2 17 12 22 22 17"></polyline>
-                                    <polyline points="2 12 12 17 22 12"></polyline>
-                                </svg>
-                                เปลี่ยนรหัสผ่าน
+                            <a class="nav-link" href="src/user.html">
+                                <span data-feather="users"></span>
+                                ผู้ใช้ทั้งหมด
                             </a>
-                        </li>
+                        </li> -->
+
                     </ul>
-
-
                 </div>
             </nav>
+            <!-- End Sidebar -->
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-                <div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"
-                    class="chartjs-size-monitor">
-                    <div class="chartjs-size-monitor-expand"
-                        style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                        <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                    </div>
-                    <div class="chartjs-size-monitor-shrink"
-                        style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                        <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                    </div>
-                </div>
+            <!-- Main -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                <!-- Head -->
                 <div
-                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
                     <h1 class="h2">ประวัติของฉัน</h1>
                     <!-- <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group mr-2">
-                      <button type="button" class="btn btn-sm btn-outline-primary">เพิ่มที่อยู่</button>
-                      
-                    </div>
-                   
-                  </div> -->
-                </div>
+                        <div class="btn-group mr-2">
+                            <button class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                            <span data-feather="calendar"></span>
+                            This week
+                        </button>
+                    </div> -->
+
+                </div> <!-- End Head -->
+                <!-- Body Main   -->
                 <div>
                     <form>
+                        <!-- username -->
                         <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">ชื่อผู้ใช้</label>
-                            <div class="col-sm-3">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail"
-                                    value="ีuserXXXX">
+                            <label for="username" class="col-sm-2 col-form-label">ชื่อผู้ใช้</label>
+                            <div class="col-sm-10">
+                                <p>TestUser</p>
+                                <!-- <input type="text" readonly class="form-control-plaintext" id="username"
+                                    value="testUser"> -->
                             </div>
                         </div>
+                        <!-- email -->
                         <div class="form-group row">
                             <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-3">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail"
-                                    value="email@example.com">
-                            </div>
-                            <a href="">เปลี่ยน</a>
-                        </div>
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">โทรศัพท์</label>
-                            <div class="col-sm-3">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail"
-                                    value="08645454454">
-                            </div>
-                            <a href="">เปลี่ยน</a>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">เพศ</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                    value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">
-                                    ชาย
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                    value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    หญิง
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
-                                    value="option3">
-                                <label class="form-check-label" for="exampleRadios3">
-                                    อื่นๆ
-                                </label>
+                            <div class="col-sm-10">
+                                <p>email@example.com <a href="src/changeEmail.html">แก้ไข</a></p>
+                                <!-- <input type="text" readonly class="form-control-plaintext" id="staticEmail"
+                                    value="email@example.com"> -->
+                                
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">วันเกิด</label>
-                            <div class="col-sm-3">
-                                <div class="form-group row">
 
-                                    <div class="col-10">
-                                        <input class="form-control" type="date" value="2011-08-19"
-                                            id="example-date-input">
-                                    </div>
-                                </div>
+                        <!-- phone -->
+                        <div class="form-group row">
+                            <label for="phone" class="col-sm-2 col-form-label">โทรศัพท์</label>
+                            <div class="col-sm-10">
+                                <p>085322222222 <a href="src/changePhone.html">แก้ไข</a></p>
+                               
+                                <!-- <input type="text" readonly class="form-control-plaintext" id="phone"
+                                    value="email@example.com"> -->
                             </div>
                         </div>
-                        <div class="btn-group mr-2">
-                            <button type="button" class="btn btn-sm btn-outline-primary">บันทึก</button>
+                        <!-- gender -->
+                        <div class="form-group row">
+                            <label for="phone" class="col-sm-2 col-form-label">เพศ</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      ชาย
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      หญิง
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                      
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+                                    <label class="form-check-label" for="exampleRadios3">
+                                      อื่นๆ
+                                    </label>
 
+                                  </div>
+                            </div>
                         </div>
+                        <!-- DOB -->
+                        <div class="form-group row">
+                            <label for="DOB" class="col-sm-2 col-form-label">วันเกิด</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group row">
+                            <div class="col-sm-3">
+                                <button type="button" class="btn btn-primary"> บันทึก </button>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
+                <!-- End Body Main -->
+
 
             </main>
+            <!-- End Nav Main -->
+
         </div>
     </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                datasets: [{
+                    data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                    lineTension: 0,
+                    backgroundColor: 'transparent',
+                    borderColor: '#007bff',
+                    borderWidth: 4,
+                    pointBackgroundColor: '#007bff'
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false
+                        }
+                    }]
+                },
+                legend: {
+                    display: false,
+                }
+            }
+        });
+    </script>
     <!-- jQuery and JS bundle w/ Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
