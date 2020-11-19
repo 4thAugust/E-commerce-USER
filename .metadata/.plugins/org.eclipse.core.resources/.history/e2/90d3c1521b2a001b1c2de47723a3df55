@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package models;
+
+/**
+ * @author memory
+ *
+ */
+public class USER {
+
+	/**
+	 * 
+	 */
+	public USER() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

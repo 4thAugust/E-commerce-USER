@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package models;
+
+import java.util.*;
+
+/**
+ * @author memory
+ *
+ */
+public class USER {
+	private String id;
+	private String userName;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String gender;
+	private Integer phone;
+	private Date dareOfBirth;
+	/**
+	 * 
+	 */
+	public USER() {
+		// TODO Auto-generated constructor stub
+		
+	}
+
+}

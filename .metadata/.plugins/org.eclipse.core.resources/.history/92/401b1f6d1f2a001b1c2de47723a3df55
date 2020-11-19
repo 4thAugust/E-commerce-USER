@@ -1,0 +1,17 @@
+package userServise.userService;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+@RestController
+public class UserController {
+
+	public UserController() {
+		// TODO Auto-generated constructor stub
+	}
+	@RequestMapping("/wellcome")
+	public String wellcome() {
+		return "hello spring";
+	}
+
+}

@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package models;
+
+/**
+ * @author memory
+ *
+ */
+public class MY_ADDRESS {
+
+	/**
+	 * 
+	 */
+	public MY_ADDRESS() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

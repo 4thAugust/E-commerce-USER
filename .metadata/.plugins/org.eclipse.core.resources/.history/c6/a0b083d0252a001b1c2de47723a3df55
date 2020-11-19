@@ -1,0 +1,33 @@
+package userServise.userService;
+
+import java.lang.reflect.Array;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import models.USER;
+@RestController
+public class UserController {
+
+	public UserController() {
+		// TODO Auto-generated constructor stub
+	}
+	@RequestMapping("/wellcome")
+	public String wellcome() {
+		return "hello spring";
+	}
+	@RequestMapping("/getUser")
+	public USER getUser() {
+		return new USER("liebe", "kit", "eam");
+	}
+	@RequestMapping(path = "/hello")
+	public USER get(){
+		USER user = new USER("liebe", "kit", "eam");
+		return user;
+	}
+
+}
