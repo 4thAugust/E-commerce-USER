@@ -9,7 +9,7 @@ https://4thaugust.github.io/E-commerce-USER/
 - /groupByGender/<gender>
 - /groupByAge/<age_range>
 - /createAddress/
-- /getAddress/
+- /getAddress/<userName>
 - /updateAddress/<my_address_id>
 - /deleteAddress/<my_address_id>
 
