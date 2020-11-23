@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Address Page</title>
+    <title>Dashboard Template for Bootstrap</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/dashboard/">
 
@@ -75,7 +75,7 @@
                 <!-- Head -->
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-                    <h1 class="h2">ที่อยู่ของฉัน</h1>
+                    <h1 class="h2">แก้ไขบที่อยู่</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group mr-2">
                             <a class="btn btn-sm btn-success" role="button" href="./createAddress.html">+</a>
@@ -87,14 +87,46 @@
 
                 </div> <!-- End Head -->
                 <!-- Body Main   -->
-                <div class="card">
-                    <div class="card-body">
-                        <p>ชื่อ</p>
-                        <p>หมายเลขโทรศัพท์</p>
-                        <p>ที่อยู่</p>
-                        <a href="./updateAddress.html">แก้ไข</a>
+                <form>
+                    <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">ชื่อ-นามสกุล</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName" placeholder="ใส่ ชื่อ-นามสกุล">
+                        </div>
                     </div>
-                </div>
+                    <div class="form-group row">
+                        <label for="inputPhone" class="col-sm-2 col-form-label">หมายเลขโทรศัพท์</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPhone" placeholder="ใส่ หมายเลขโทรศัพท์">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputProvince" class="col-sm-2 col-form-label">จังหวัด</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputProvince" placeholder="ใส่ จังหวัด">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputDistrict" class="col-sm-2 col-form-label">เขต/อำเภอ</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputDistrict" placeholder="ใส่ เขต/อำเภอ">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPostalcode" class="col-sm-2 col-form-label">เลขไปรษณีย์</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPostalcode" placeholder="ใส่ เลขไปรษณีย์">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputAddress" class="col-sm-2 col-form-label">รายละเอียดที่อยู่ <br> ห้องเลขที่,บ้านเลขที่,ตึก,ชื่อถนน,ซอย </label>
+                
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="inputAddress" rows="3" placeholder="ใส่รายละเอียดที่อยู่"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">บันทึก</button>
+                </form>
                 <!-- End Body Main -->
 
 
@@ -121,7 +153,7 @@
     </script>
 
     <!-- Graphs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script>
         var ctx = document.getElementById("myChart");
         var myChart = new Chart(ctx, {
@@ -150,7 +182,7 @@
                 }
             }
         });
-    </script>
+    </script> -->
     <!-- jQuery and JS bundle w/ Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
