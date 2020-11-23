@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RestController;
 
+import models.MY_ADDRESS;
 import models.USER;
 
 @SpringBootApplication
@@ -19,6 +20,7 @@ import models.USER;
 public class App 
 {
 	public static ArrayList<USER> dummyData = new ArrayList<>(); 
+	public static ArrayList<MY_ADDRESS> dummyDataAddress = new ArrayList<>(); 
     public static void main( String[] args )
     {
     	SpringApplication.run(App.class, args);

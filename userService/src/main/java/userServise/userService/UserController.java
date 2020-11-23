@@ -1,7 +1,9 @@
 package userServise.userService;
 
 import java.lang.reflect.Array;
+import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,14 +17,49 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sun.el.stream.Stream;
 
+import models.MY_ADDRESS;
 import models.USER;
 
 
 
 @RestController
 public class UserController {
-	
+	MY_ADDRESS address1;
+	MY_ADDRESS address2;
+	USER demoUser;
 	public UserController() {
+		demoUser = new USER();	
+		demoUser.setId(1);
+		demoUser.setUserName("testUser");
+		demoUser.setFirstName("กิตติวัชร");
+		demoUser.setLastName("เอี่ยมกิจการ");
+		demoUser.setEmail("64070001@it.kmitl.ac.th");
+		demoUser.setDareOfBirth(new Date(10, 10, 2020));
+		demoUser.setPhone("0889979667");
+		demoUser.setGender("Male");
+		App.dummyData.add(demoUser);
+		
+		address1 = new MY_ADDRESS();
+		address2 = new MY_ADDRESS();
+		address1.setUSER_id(1);
+		address1.setMy_address_id(1);
+		address1.setNumber("0632128395");
+		address1.setPostal_code("10160");
+		address1.setDistrict("ปากช่อง");
+		address1.setProvince("กรุงดทพ");
+		address1.setRoad("พัฒนาการ");
+		address1.setSub_district("คันนายาว");
+		
+		address2.setUSER_id(1);
+		address2.setMy_address_id(2);
+		address2.setNumber("0631235435");
+		address2.setPostal_code("10000");
+		address2.setDistrict("ปากเกร็ต");
+		address2.setProvince("กรุงดทพ");
+		address2.setRoad("อ่อนนุช");
+		address2.setSub_district("บางเขน");
+		App.dummyDataAddress.add(address1);
+		App.dummyDataAddress.add(address2);
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -39,10 +76,22 @@ public class UserController {
 		App.dummyData.add(newUser);
 		return new ResponseEntity<ArrayList<USER>>(App.dummyData,HttpStatus.OK);
 	}
-	@RequestMapping("/getUser")
-	public USER getUser(@RequestParam(value="name", defaultValue="World") String name) {
-		return new USER();
+	@RequestMapping("/getUserByUsername")
+	public USER getUserByUsername(@RequestParam(value="username", defaultValue="") String username) {
+		ArrayList<USER> findUser = new ArrayList<>();
+		USER[] arr = App.dummyData.stream().filter(e -> e.getUserName().equals(username)).toArray(USER[]::new);
+		Collections.addAll(findUser, arr);
+		return findUser.get(0);
 	}
+	
+	@RequestMapping("/getUserByID")
+	public USER getUserByID(@RequestParam(value="id", defaultValue="") Integer id) {
+		ArrayList<USER> findUser = new ArrayList<>();
+		USER[] arr = App.dummyData.stream().filter(e -> e.getId().equals(id)).toArray(USER[]::new);
+		Collections.addAll(findUser, arr);
+		return findUser.get(0);
+	}
+	
 	//getAllUser
 	@RequestMapping(path = "/getAllUser", method=RequestMethod.GET)
 	public ResponseEntity<ArrayList<USER>> createUser(){
@@ -53,7 +102,8 @@ public class UserController {
 	@RequestMapping(path = "/groupByGender", method=RequestMethod.GET)
 	public ResponseEntity<ArrayList<USER>> groupByGender(@RequestParam(value="gender", defaultValue="Male") String gender){
 		ArrayList<USER> genderFilter = new ArrayList<USER>();
-		
+		USER[] arr = App.dummyData.stream().filter(e -> e.getGender().equals(gender)).toArray(USER[]::new);
+		Collections.addAll(genderFilter, arr);
 		return new ResponseEntity<ArrayList<USER>>(genderFilter,HttpStatus.OK);
 	}
 	
@@ -66,34 +116,48 @@ public class UserController {
 	
 	///createAddress/
 	@RequestMapping(path = "/createAddress", method=RequestMethod.POST)
-	public ResponseEntity<ArrayList<USER>> createAddress(@RequestParam(value="gender", defaultValue="Male") String gender){
-		ArrayList<USER> genderFilter = new ArrayList<USER>();
+	public ResponseEntity<ArrayList<MY_ADDRESS>> createAddress(){
+		ArrayList<MY_ADDRESS> genderFilter = new ArrayList<MY_ADDRESS>();
+		MY_ADDRESS newAddress = new MY_ADDRESS();
 		
-		return new ResponseEntity<ArrayList<USER>>(genderFilter,HttpStatus.OK);
+		genderFilter.add(newAddress);
+		return new ResponseEntity<ArrayList<MY_ADDRESS>>(App.dummyDataAddress,HttpStatus.OK);
 	}
 	
-	///getAddress/
-	@RequestMapping(path = "/getAddress", method=RequestMethod.GET)
-	public ResponseEntity<ArrayList<USER>> getAddress(@RequestParam(value="gender", defaultValue="Male") String gender){
-		ArrayList<USER> genderFilter = new ArrayList<USER>();
-		
-		return new ResponseEntity<ArrayList<USER>>(genderFilter,HttpStatus.OK);
-	}
+	///getAddress/  ไม่แน่ใจว่ามีคนใช้มั้ย
+//	@RequestMapping(path = "/getAddress", method=RequestMethod.GET)
+//	public ResponseEntity<ArrayList<USER>> getAddress(@RequestParam(value="gender", defaultValue="Male") String gender){
+//		ArrayList<USER> genderFilter = new ArrayList<USER>();
+//		
+//		return new ResponseEntity<ArrayList<USER>>(genderFilter,HttpStatus.OK);
+//	}
+	
+	///getAddressByID/
+		@RequestMapping(path = "/getAddressByUserID", method=RequestMethod.GET)
+		public ResponseEntity<ArrayList<MY_ADDRESS>> getAddressByUserID(@RequestParam(value="id", defaultValue="0") Integer id){
+			ArrayList<MY_ADDRESS> addressFilter = new ArrayList<MY_ADDRESS>();
+			MY_ADDRESS[] arr = App.dummyDataAddress.stream().filter(e -> e.getUSER_id().equals(id)).toArray(MY_ADDRESS[]::new);
+			Collections.addAll(addressFilter, arr);
+			
+			return new ResponseEntity<ArrayList<MY_ADDRESS>>(addressFilter,HttpStatus.OK);
+		}
 	
 	///updateAddress/<my_address_id>
 	@RequestMapping(path = "/updateAddress", method=RequestMethod.GET)
-	public ResponseEntity<ArrayList<USER>> updateAddress(@RequestParam(value="gender", defaultValue="Male") String gender){
-		ArrayList<USER> genderFilter = new ArrayList<USER>();
-		
-		return new ResponseEntity<ArrayList<USER>>(genderFilter,HttpStatus.OK);
+	public ResponseEntity<ArrayList<MY_ADDRESS>> updateAddress(@RequestBody MY_ADDRESS updateAddress){
+		App.dummyDataAddress.set(App.dummyDataAddress.indexOf(updateAddress), updateAddress);
+		return new ResponseEntity<ArrayList<MY_ADDRESS>>(App.dummyDataAddress,HttpStatus.OK);
 	}
 	
 	//deleteAddress/<my_address_id>
 	@RequestMapping(path = "/deleteAddress", method=RequestMethod.GET)
-	public ResponseEntity<ArrayList<USER>> deleteAddress(@RequestParam(value="gender", defaultValue="Male") String gender){
-		ArrayList<USER> genderFilter = new ArrayList<USER>();
+	public ResponseEntity<ArrayList<MY_ADDRESS>> deleteAddress(@RequestParam(value="addressID", defaultValue="") Integer addressID){
+		ArrayList<MY_ADDRESS> addressFilter = new ArrayList<MY_ADDRESS>();
+		MY_ADDRESS[] arr = App.dummyDataAddress.stream().filter(e -> e.getMy_address_id().equals(addressID)).toArray(MY_ADDRESS[]::new);
+		Collections.addAll(addressFilter, arr);
+		App.dummyDataAddress.remove(addressFilter.get(0));
 		
-		return new ResponseEntity<ArrayList<USER>>(genderFilter,HttpStatus.OK);
+		return new ResponseEntity<ArrayList<MY_ADDRESS>>(App.dummyDataAddress,HttpStatus.OK);
 	}
 	
 }
