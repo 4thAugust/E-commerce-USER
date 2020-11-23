@@ -10,13 +10,13 @@ import java.util.*;
  *
  */
 public class USER {
-	private String id;
+	private Integer id;
 	private String userName;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String gender;
-	private Integer phone;
+	private String phone;
 	private Date dareOfBirth;
 	/**
 	 * 
@@ -33,10 +33,10 @@ public class USER {
 	public String getUserName() {
 		return this.userName;
 	}
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getFirstName() {
@@ -63,10 +63,10 @@ public class USER {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public Integer getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(Integer phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public Date getDareOfBirth() {
