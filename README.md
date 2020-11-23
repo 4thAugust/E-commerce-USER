@@ -9,12 +9,15 @@ https://4thaugust.github.io/E-commerce-USER/
 - /groupByGender/<gender>
 - /groupByAge/<age_range>
 - /createAddress/
-- /getAddress/
+- /getAddress/<userName>
 - /updateAddress/<my_address_id>
 - /deleteAddress/<my_address_id>
 
-## :page_with_curl: Database 
-![USER (3)](https://user-images.githubusercontent.com/41178248/99364192-44662280-28e8-11eb-9f11-31f35bec7fd4.png)
+## :page_with_curl: Database Update 23/11/20
+
+![USER 9_11 (3)](https://user-images.githubusercontent.com/41178248/99928045-123a4200-2d7a-11eb-891c-0c5a7424efa3.png)
+
+
 
 
 
@@ -31,11 +34,11 @@ https://4thaugust.github.io/E-commerce-USER/
    
 2. ที่อยู่ของผู้ใช้งาน (MY_ADDRESS)
    * ไอดี (my_address_id)
+   * ชื่อผู้รับ (name)
+   * เบอร์โทรศัพท์ผู้รับ (phone)
    * จังหวัด (province)
    * อำเภอ (district)
-   * ตำบล (sub_district)
-   * ถนน (road)
-   * เลขที่ (number)
+   * รายละเอียดที่อยู่ เช่น บ้านเลขที่ ชื่อถนน ซอย ตึก (address)
    * รหัสไปรษณีย์ (postal_code)
    
 
