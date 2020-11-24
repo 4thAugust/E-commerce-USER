@@ -36,6 +36,7 @@ https://4thaugust.github.io/E-commerce-USER/
    
 2. ที่อยู่ของผู้ใช้งาน (MY_ADDRESS)
    * ไอดี (my_address_id)
+   * ไอดีผู้ใช้ (USER_id)
    * ชื่อผู้รับ (name)
    * เบอร์โทรศัพท์ผู้รับ (phone)
    * จังหวัด (province)
