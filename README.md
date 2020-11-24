@@ -7,8 +7,6 @@ https://4thaugust.github.io/E-commerce-USER/
 - /getUser/<:userName> ดึงข้อมูลผู้ใช้ผ่าน username
 - /getUser/<:id> ดึงข้อมูลผู้ใช้ผ่าน id
 - /getAllUser ดึงข้อมูลผู้ใช้งานในระบบทุกคน
-- /groupByGender/<:gender> ดึงข้อมูลผู้ใช้งานในระบบทุกคน Filter ผ่านเพศ
-- /groupByAge/<:age_range> ดึงข้อมูลผู้ใช้งานในระบบทุกคน Filter ผ่านช่วงอายุ
 - /createAddress/ สร้างที่อยู่ของผู้ใช้
 - /getAddress/<:userName> ดึงข้อมูลที่อยู่อยู่ของผู้ใช้
 - /updateAddress/<:my_address_id> แก้ไขข้อมูลที่อยู่ที่ id นั้น
