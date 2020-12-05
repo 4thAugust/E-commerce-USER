@@ -31,8 +31,8 @@ public class UserController {
 		demoUser = new USER();	
 		demoUser.setId(1);
 		demoUser.setUserName("testUser");
-		demoUser.setFirstName("กิตติวัชร");
-		demoUser.setLastName("เอี่ยมกิจการ");
+		demoUser.setFirstName("Chayanee");
+		demoUser.setLastName("Khamcharoen");
 		demoUser.setEmail("64070001@it.kmitl.ac.th");
 		demoUser.setDareOfBirth(new Date(10, 10, 2020));
 		demoUser.setPhone("0889979667");
@@ -45,19 +45,19 @@ public class UserController {
 		address1.setMy_address_id(1);
 		address1.setNumber("0632128395");
 		address1.setPostal_code("10160");
-		address1.setDistrict("ปากช่อง");
-		address1.setProvince("กรุงดทพ");
-		address1.setRoad("พัฒนาการ");
-		address1.setSub_district("คันนายาว");
+		address1.setDistrict("Paakchong");
+		address1.setProvince("Bangkok");
+		address1.setRoad("Pattanakarn");
+		address1.setSub_district("Kannayarn");
 		
 		address2.setUSER_id(1);
 		address2.setMy_address_id(2);
 		address2.setNumber("0631235435");
 		address2.setPostal_code("10000");
-		address2.setDistrict("ปากเกร็ต");
-		address2.setProvince("กรุงดทพ");
-		address2.setRoad("อ่อนนุช");
-		address2.setSub_district("บางเขน");
+		address2.setDistrict("Parkgret");
+		address2.setProvince("Bangkok");
+		address2.setRoad("Onnut");
+		address2.setSub_district("Bangkhean");
 		App.dummyDataAddress.add(address1);
 		App.dummyDataAddress.add(address2);
 		// TODO Auto-generated constructor stub
@@ -143,7 +143,7 @@ public class UserController {
 		}
 	
 	///updateAddress/<my_address_id>
-	@RequestMapping(path = "/updateAddress", method=RequestMethod.GET)
+	@RequestMapping(path = "/updateAddress", method=RequestMethod.POST)
 	public ResponseEntity<ArrayList<MY_ADDRESS>> updateAddress(@RequestBody MY_ADDRESS updateAddress){
 		App.dummyDataAddress.set(App.dummyDataAddress.indexOf(updateAddress), updateAddress);
 		return new ResponseEntity<ArrayList<MY_ADDRESS>>(App.dummyDataAddress,HttpStatus.OK);

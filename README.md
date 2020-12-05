@@ -3,15 +3,15 @@
 ## :computer: User Interface 
 https://4thaugust.github.io/E-commerce-USER/
 ## :wrench: API
-- /createUser/
-- /getUser/<userName>
-- /getAllUser
-- /groupByGender/<gender>
-- /groupByAge/<age_range>
-- /createAddress/
-- /getAddress/<userName>
-- /updateAddress/<my_address_id>
-- /deleteAddress/<my_address_id>
+- /createUser/ สร้างข้อมูลผู้ใช้
+- /getUser/<:userName> ดึงข้อมูลผู้ใช้ผ่าน username
+- /getUser/<:id> ดึงข้อมูลผู้ใช้ผ่าน id
+- /getAllUser ดึงข้อมูลผู้ใช้งานในระบบทุกคน
+- /createAddress/ สร้างที่อยู่ของผู้ใช้
+- /getAddress/<:userName> ดึงข้อมูลที่อยู่อยู่ของผู้ใช้
+- /updateAddress/<:my_address_id> แก้ไขข้อมูลที่อยู่ที่ id นั้น
+- /deleteAddress/<:my_address_id> ลบไขข้อมูลที่อยู่ที่ id นั้น
+
 
 ## :page_with_curl: Database Update 23/11/20
 
@@ -34,6 +34,7 @@ https://4thaugust.github.io/E-commerce-USER/
    
 2. ที่อยู่ของผู้ใช้งาน (MY_ADDRESS)
    * ไอดี (my_address_id)
+   * ไอดีผู้ใช้ (USER_id)
    * ชื่อผู้รับ (name)
    * เบอร์โทรศัพท์ผู้รับ (phone)
    * จังหวัด (province)
