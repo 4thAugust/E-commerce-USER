@@ -10,6 +10,7 @@
 
     <title>Profile Page</title>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/dashboard/">
 
     <!-- Bootstrap core CSS -->
@@ -28,7 +29,7 @@
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">E-Commerce</a>
         <ul class="navbar-nav px-3">
             <a href="../index.html"><button type="button" class="btn btn-danger">home</button></a>
-            
+
         </ul>
     </nav>
 
@@ -90,6 +91,17 @@
                 </div> <!-- End Head -->
                 <!-- Body Main   -->
                 <div>
+                    <script>
+                        var userName = sessionStorage.getItem("userName")
+
+                        console.log("v1", userName);
+                        axios
+                            .get("http://localhost:8888/getUserByUsername"+userName)
+                            .then(response => {
+                                console.log("response GetAllUSER: ", response.data)
+                                const user = response.data;
+
+                    </script>
                     <form>
                         <!-- username -->
                         <div class="form-group row">
@@ -107,7 +119,7 @@
                                 <p>email@example.com <a href="./changeEmail.html">แก้ไข</a></p>
                                 <!-- <input type="text" readonly class="form-control-plaintext" id="staticEmail"
                                     value="email@example.com"> -->
-                                
+
                             </div>
                         </div>
 
@@ -116,7 +128,7 @@
                             <label for="phone" class="col-sm-2 col-form-label">โทรศัพท์</label>
                             <div class="col-sm-10">
                                 <p>085322222222 <a href="./changePhone.html">แก้ไข</a></p>
-                               
+
                                 <!-- <input type="text" readonly class="form-control-plaintext" id="phone"
                                     value="email@example.com"> -->
                             </div>
@@ -126,25 +138,28 @@
                             <label for="phone" class="col-sm-2 col-form-label">เพศ</label>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios1" value="option1" checked>
                                     <label class="form-check-label" for="exampleRadios1">
-                                      ชาย
+                                        ชาย
                                     </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="option2">
                                     <label class="form-check-label" for="exampleRadios2">
-                                      หญิง
+                                        หญิง
                                     </label>
-                                  </div>
-                                  <div class="form-check">
-                                      
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+                                </div>
+                                <div class="form-check">
+
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios3" value="option3">
                                     <label class="form-check-label" for="exampleRadios3">
-                                      อื่นๆ
+                                        อื่นๆ
                                     </label>
 
-                                  </div>
+                                </div>
                             </div>
                         </div>
                         <!-- DOB -->
@@ -186,39 +201,39 @@
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <script>
-        feather.replace()
+                                feather.replace()
     </script>
 
     <!-- Graphs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script>
-        var ctx = document.getElementById("myChart");
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                datasets: [{
-                    data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
-                    lineTension: 0,
-                    backgroundColor: 'transparent',
-                    borderColor: '#007bff',
-                    borderWidth: 4,
-                    pointBackgroundColor: '#007bff'
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: false
-                        }
-                    }]
-                },
-                legend: {
-                    display: false,
-                }
-            }
-        });
+                                var ctx = document.getElementById("myChart");
+                                var myChart = new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                                        datasets: [{
+                                            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                                            lineTension: 0,
+                                            backgroundColor: 'transparent',
+                                            borderColor: '#007bff',
+                                            borderWidth: 4,
+                                            pointBackgroundColor: '#007bff'
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            yAxes: [{
+                                                ticks: {
+                                                    beginAtZero: false
+                                                }
+                                            }]
+                                        },
+                                        legend: {
+                                            display: false,
+                                        }
+                                    }
+                                });
     </script>
     <!-- jQuery and JS bundle w/ Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
