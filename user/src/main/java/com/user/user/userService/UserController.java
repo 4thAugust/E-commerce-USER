@@ -205,8 +205,25 @@ public class UserController {
 //	
 	///createAddress/
 	@RequestMapping(path = "/createAddress", method=RequestMethod.POST)
-	public List<MY_ADDRESS> createAddress(){
-		return null;
+	public String createAddress(@RequestBody MY_ADDRESS newAddress){
+num++;
+		
+		Map<String, Object> docData = new HashMap<>();
+//		docData.put("id", num);
+		docData.put("USER_id", newAddress.getUSER_id());
+		docData.put("my_address_id", num.toString());
+		docData.put("number", newAddress.getNumber());
+		docData.put("district", newAddress.getDistrict());
+		docData.put("postal_code", newAddress.getPostal_code());
+		docData.put("province", newAddress.getProvince());
+		docData.put("road", newAddress.getRoad());
+		docData.put("sub_district", newAddress.getSub_district());
+		String addressID2 = num.toString();
+		// Add a new document (asynchronously) in collection "cities" with id "LA"
+//		ApiFuture<QuerySnapshot> querySnapshot = db.getFirebase().collection("user").get();
+		
+		ApiFuture<WriteResult> future = db.getFirebase().collection("user").document(addressID2).set(docData);
+		return "create success";
 //		List<MY_ADDRESS> address = new List<MY_ADDRESS>();
 //		ApiFuture<QuerySnapshot> querySnapshot = db.getFirebase().collection("my_address").whereEqualTo("userName", username) .get();
 ////		// future.get() blocks on response
@@ -251,18 +268,20 @@ public class UserController {
 	///updateAddress/<my_address_id>
 	@RequestMapping(path = "/updateAddress", method=RequestMethod.GET)
 	public ResponseEntity<ArrayList<MY_ADDRESS>> updateAddress(@RequestBody MY_ADDRESS updateAddress){
-		App.dummyDataAddress.set(App.dummyDataAddress.indexOf(updateAddress), updateAddress);
+		ApiFuture<WriteResult> future = db.getFirebase().collection("my_address").document(updateAddress.getMy_address_id().toString()).set(updateAddress);
+		//		App.dummyDataAddress.set(App.dummyDataAddress.indexOf(updateAddress), updateAddress);
 		return new ResponseEntity<ArrayList<MY_ADDRESS>>(App.dummyDataAddress,HttpStatus.OK);
 	}
 	
 	//deleteAddress/<my_address_id>
 	@RequestMapping(path = "/deleteAddress", method=RequestMethod.GET)
 	public ResponseEntity<ArrayList<MY_ADDRESS>> deleteAddress(@RequestParam(value="addressID", defaultValue="") Integer addressID){
-		ArrayList<MY_ADDRESS> addressFilter = new ArrayList<MY_ADDRESS>();
-		MY_ADDRESS[] arr = App.dummyDataAddress.stream().filter(e -> e.getMy_address_id().equals(addressID)).toArray(MY_ADDRESS[]::new);
-		Collections.addAll(addressFilter, arr);
-		App.dummyDataAddress.remove(addressFilter.get(0));
-		
+//		ArrayList<MY_ADDRESS> addressFilter = new ArrayList<MY_ADDRESS>();
+//		MY_ADDRESS[] arr = App.dummyDataAddress.stream().filter(e -> e.getMy_address_id().equals(addressID)).toArray(MY_ADDRESS[]::new);
+//		Collections.addAll(addressFilter, arr);
+//		App.dummyDataAddress.remove(addressFilter.get(0));
+		db.collection("my_address").document(addressID.toString()).delete();
+
 		return new ResponseEntity<ArrayList<MY_ADDRESS>>(App.dummyDataAddress,HttpStatus.OK);
 	}
 	
